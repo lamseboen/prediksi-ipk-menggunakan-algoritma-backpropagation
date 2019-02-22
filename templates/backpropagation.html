@@ -1,0 +1,79 @@
+{% include "module/header.html" %}
+{% include "module/menu.html" %}
+<div id="page-wrapper">
+
+        <div class="row">
+            <h1> Backpropagation</h1>
+            <ol class="breadcrumb">
+              <li><a href="index.php"><i class="fa fa-desktop"></i> Home</a></li>
+              <li class="active"><i class="fa fa-wrench"></i> Backpropagation</li>
+            </ol>
+        </div><!-- /.row -->
+        <div class="row">
+		<div id="bpn">
+            <div class="form-horizontal" role="form">
+              <form class="" action="" method="post" name="backprop">
+			  <div class="form-group">
+				<label for="Learning Rate" class="col-sm-2 control-label">Learning Rate</label>
+				<div class="col-xs-3">
+				  <input type="text" id="lr" class="form-control" name="learning_rate" size="5" value="0.3" placeholder="Learning Rate">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="epoch" class="col-sm-2 control-label">epochs</label>
+				<div class="col-xs-3">
+				  <input type="text" id="mm" name="epochs" class="form-control" size="5" value="1000" placeholder="Momentum">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="Input Layer" class="col-sm-2 control-label">Hidden Layer 1</label>
+				<div class="col-xs-3">
+				  <input type="text"  name="hl[]"   class="form-control" size="5" value="7"  placeholder="Input Layer">
+				</div>
+			  </div>
+
+        <div class="form-group">
+				<label for="Hidden Layer" class="col-sm-2 control-label">aktivasi layer 1</label>
+				<div class="col-xs-3">
+          			<!-- <input type="text" name="al[]" value="" placeholder="'relu', 'sigmoid', 'softmax'"> -->
+          			<select name="al[]" class="form-control">
+          				<option value="relu">relu</option>
+          				<option value="sigmoid">sigmoid</option>
+          				<option value="softmax">softmax</option>
+          			</select>
+				</div>
+		</div>
+
+
+        <div class="form-group" id="tambah">
+
+		</div>
+
+			  <div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				<div class="controls">
+					<button id="process" name="button1id" class="btn btn-success">Process</button>
+				  </div>
+				</div>
+        </form>
+        <div class="col-sm-offset-2 col-sm-10" style="margin-top: 5px">
+          <a id="tambah_field" class="btn btn-info">Tambah Input</a>
+        </div>
+			  </div>
+			</div>
+        </div><!-- /#bpn -->
+        </div><!-- /.row -->
+      </div><!-- /#page-wrapper -->
+
+      <script>
+        var n = 1
+        $(document).ready(function(){
+          $("#tambah_field").click(function(){
+            $("#tambah").before('<div class="form-group"><label class="col-sm-2 control-label">Hidden layer'+(n+1)+' </label><div class="col-xs-3"><input type="text" name="hl[]"   class="form-control" size="5" value="7"  placeholder="Input Layer"></div></div>  <div class="form-group"><label for="Hidden Layer" class="col-sm-2 control-label">aktivasi layer '+(n+1)+'</label><div class="col-xs-3"><select name="al[]" class="form-control"><option value="relu">relu</option><option value="sigmoid">sigmoid</option><option value="softmax">softmax</option></select></div></div>')
+            n++;
+          });
+
+        });
+      </script>
+
+      {% include "module/footer.html" %}

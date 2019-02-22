@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body onload="tampilHasil()">
+
+<p id="demo"></p>
+
+
+<script>
+function tampilHasil() {
+
+  var text = ({{ hasil|tojson }});
+  alert(text);
+  window.location = "prediksi";
+  
+}
+</script>
+
+</body>
+</html> 

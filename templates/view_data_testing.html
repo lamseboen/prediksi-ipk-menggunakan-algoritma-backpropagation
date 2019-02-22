@@ -1,0 +1,56 @@
+<!-- {%include "module/header.html"%}
+{%include "module/menu.html"%}
+<div id="page-wrapper">
+
+        <div class="row">
+            <h1>Data Testing</h1>
+            <ol class="breadcrumb">
+              <li><a href="index.php"><i class="fa fa-desktop"></i> Home</a></li>
+              <li class="active"><i class="fa fa-table"></i> Data Testing</li>
+            </ol>
+        </div><!-- /.row -->
+       <!-- <div class="row">
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover">
+                <thead>
+                   <tr>
+					<th>NO.</th>
+					<th>JENIS KELAMIN</th>
+					<th>SEMESTER</th>
+					<th>X1</th>
+					<th>X2</th>
+					<th>X3</th>
+					<th>X4</th>
+					<th>X5</th>
+					<th>X6</th>
+					<th>X7</th>
+					<th>TARGET(IPK)</th>
+				  </tr>
+                </thead>
+                <tbody>
+                  {% set n = 1%}
+                  {% set no = 1%}
+                  {% for data in data_testing%}
+                    <tr>
+                      <td>{{no}}</td>
+                      <td>{{data[0]}}</td>
+                      <td>{{data[1]}}</td>
+                      <td>{{data[2]}}</td>
+                      <td>{{data[3]}}</td>
+                      <td>{{data[4]}}</td>
+                      <td>{{data[5]}}</td>
+                      <td>{{data[6]}}</td>
+                      <td>{{data[7]}}</td>
+                      <td>{{data[8]}}</td>
+                      <td>{{data[9]}}</td>
+                    </tr>
+                    {% set no = n+1 %}
+                    {%endfor%}
+
+                </tbody>
+              </table>
+            </div>
+        </div><!-- /.row -->
+
+    <!--  </div><!-- /#page-wrapper -->
+<!--{%include "module/footer.html"%} -->
